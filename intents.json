@@ -1,0 +1,202 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good evening"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?"
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "exit"
+      ],
+      "responses": [
+        "Goodbye! Have a nice day.",
+        "Thanks for visiting. Bye!"
+      ]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thanks a lot",
+        "appreciate it"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help "
+      ]
+    },
+
+    {
+      "tag": "working_hours",
+      "patterns": [
+        "working hours",
+        "office timings",
+        "when are you open"
+      ],
+      "responses": [
+        "We are open from 9 AM to 6 PM, Monday to Friday."
+      ]
+    },
+
+    {
+      "tag": "order_tracking",
+      "patterns": [
+        "track my order",
+        "order status",
+        "where is my order"
+      ],
+      "responses": [
+        "Please enter your order ID to track your order."
+      ]
+    },
+
+    {
+      "tag": "delivery_time",
+      "patterns": [
+        "delivery time",
+        "how long does delivery take",
+        "when will i receive my order"
+      ],
+      "responses": [
+        "Delivery usually takes 3 to 5 working days."
+      ]
+    },
+
+    {
+      "tag": "refund_policy",
+      "patterns": [
+        "refund policy",
+        "can i get a refund",
+        "refund details"
+      ],
+      "responses": [
+        "Refunds are processed within 7 working days after approval."
+      ]
+    },
+
+    {
+      "tag": "return_policy",
+      "patterns": [
+        "return policy",
+        "how can i return a product",
+        "product return"
+      ],
+      "responses": [
+        "You can return products within 10 days of delivery."
+      ]
+    },
+
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "payment options",
+        "how can i pay",
+        "do you accept upi"
+      ],
+      "responses": [
+        "We accept UPI, credit cards, debit cards, and net banking."
+      ]
+    },
+
+    {
+      "tag": "cancel_order",
+      "patterns": [
+        "cancel my order",
+        "order cancellation",
+        "how to cancel order"
+      ],
+      "responses": [
+        "Orders can be cancelled within 24 hours of placing them."
+      ]
+    },
+
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "contact customer care",
+        "customer support number",
+        "help desk"
+      ],
+      "responses": [
+        "You can contact us at support@example.com or call 1800-123-456."
+      ]
+    },
+
+    {
+      "tag": "complaint",
+      "patterns": [
+        "i want to complain",
+        "register a complaint",
+        "bad service"
+      ],
+      "responses": [
+        "Sorry for the inconvenience. Please describe your issue."
+      ]
+    },
+
+    {
+      "tag": "product_info",
+      "patterns": [
+        "product details",
+        "product information",
+        "tell me about this product"
+      ],
+      "responses": [
+        "Please mention the product name for more details."
+      ]
+    },
+
+    {
+      "tag": "offers",
+      "patterns": [
+        "any offers",
+        "discounts available",
+        "current deals"
+      ],
+      "responses": [
+        "We currently have exciting offers. Please check our offers page."
+      ]
+    },
+
+    {
+      "tag": "location",
+      "patterns": [
+        "where are you located",
+        "office address",
+        "company location"
+      ],
+      "responses": [
+        "We are located in Chennai, India."
+      ]
+    },
+
+    {
+      "tag": "account_help",
+      "patterns": [
+        "login issue",
+        "cant access my account",
+        "account problem"
+      ],
+      "responses": [
+        "Please reset your password or contact customer support."
+      ]
+    }
+  ]
+}
