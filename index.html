@@ -1360,6 +1360,67 @@ function getStaticResponse(userText) {
 }
 
 /* ══════════════════════════════════════════
+   RENDER MESSAGES
+══════════════════════════════════════════ */
+function appendMsg(html, isUser) {
+  const msgs = document.getElementById('messages');
+  const row = document.createElement('div');
+  row.className = 'msg-row ' + (isUser ? 'user' : 'bot');
+
+  const ava = document.createElement('div');
+  ava.className = 'msg-ava';
+  ava.textContent = isUser ? '👤' : '🤖';
+
+  const content = document.createElement('div');
+  content.className = 'msg-content';
+
+  const meta = document.createElement('div');
+  meta.className = 'msg-meta';
+  meta.innerHTML = isUser
+    ? `<span class="msg-sender">Alex Morgan</span> ${nowTime()}`
+    : `<span class="msg-sender">NEXUS</span> ${nowTime()} · AI Response`;
+
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.innerHTML = html;
+
+  content.appendChild(meta);
+  content.appendChild(bubble);
+
+  if (!isUser) {
+    const fbRow = document.createElement('div');
+    fbRow.className = 'feedback-row';
+    fbRow.innerHTML = `
+      <button class="fb-btn" title="Helpful" onclick="fbClick(this,'👍')">👍</button>
+      <button class="fb-btn" title="Not helpful" onclick="fbClick(this,'👎')">👎</button>
+      <button class="fb-btn fb-copy" title="Copy" onclick="copyBubble(this)">⎘</button>`;
+    content.appendChild(fbRow);
+  }
+
+  row.appendChild(ava);
+  row.appendChild(content);
+  msgs.appendChild(row);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('messages');
+  const row = document.createElement('div');
+  row.className = 'typing-row'; row.id = 'typingRow';
+  const ava = document.createElement('div'); ava.className = 'msg-ava'; ava.textContent = '🤖';
+  const tb = document.createElement('div'); tb.className = 'typing-bubble';
+  [1,2,3].forEach(() => { const d = document.createElement('div'); d.className = 't-dot'; tb.appendChild(d); });
+  row.appendChild(ava); row.appendChild(tb);
+  msgs.appendChild(row);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function hideTyping() {
+  const el = document.getElementById('typingRow');
+  if (el) el.remove();
+}
+
+/* ══════════════════════════════════════════
    SEND MESSAGE (STATIC)
 ══════════════════════════════════════════ */
 let tokenTotal = 0;
